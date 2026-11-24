@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>イソトレチノインの飲み方ガイド</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<style>
+/* Layout: one narrow column read on a phone. Two big statements first, then the myth pairs, the two-stage path, and one lookup table. */
+:root{
+  --bg:#f3f6f7; --surface:#ffffff; --ink:#14272e; --muted:#5b6e75; --line:#d3dde0;
+  --accent:#0b7a8a; --accent-soft:#dcf0f2; --bad:#b3372b; --good:#1c7a4e;
+  --display:"Zen Kaku Gothic New","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f1a1e; --surface:#17262b; --ink:#e4eef0; --muted:#9db0b6; --line:#2b3c42;
+  --accent:#58c4d2; --accent-soft:#16363c; --bad:#ff8f84; --good:#6fd3a0; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0f1a1e; --surface:#17262b; --ink:#e4eef0; --muted:#9db0b6; --line:#2b3c42;
+  --accent:#58c4d2; --accent-soft:#16363c; --bad:#ff8f84; --good:#6fd3a0; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 56px;display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{font-family:var(--display);line-height:1.4;margin:0;text-wrap:balance}
+h1{font-size:26px;font-weight:900}
+h2{font-size:20px;font-weight:900;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+h3{font-size:17px;font-weight:700}
+p,ul{margin:0}
+header{display:flex;flex-direction:column;gap:8px}
+.meta{font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:4px;padding:0 8px;background:var(--surface)}
+section{display:flex;flex-direction:column;gap:16px;min-width:0}
+
+.hero{display:flex;flex-direction:column;gap:14px}
+.hero p{font-family:var(--display);font-weight:900;font-size:22px;line-height:1.5;text-wrap:balance}
+.hero .key{background:var(--accent-soft);border-left:6px solid var(--accent);padding:14px 16px;border-radius:0 8px 8px 0}
+
+.pairs{display:flex;flex-direction:column;gap:14px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1.3fr);align-items:stretch;gap:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;justify-content:center;min-width:0}
+.card.right{background:var(--accent-soft);border:2px solid var(--accent)}
+.lab{font-size:13px;font-weight:700}
+.lab.bad{color:var(--bad)}
+.lab.good{color:var(--good)}
+.say{font-family:var(--display);font-weight:700;font-size:17px;line-height:1.5}
+.sub{font-size:14px;line-height:1.6}
+.arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:12px;line-height:1.2;gap:2px}
+.arrow::after{content:"\2192";font-size:20px}
+
+.goal-line{font-size:17px}
+.goal-line strong{font-family:var(--display);font-weight:900;font-size:19px}
+
+.stages{display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 16px}
+.marks{position:relative;height:46px;font-size:13px;font-weight:700;line-height:1.35}
+.m1{position:absolute;left:25%;bottom:6px;transform:translateX(-50%);white-space:nowrap}
+.m2{position:absolute;right:0;bottom:6px;text-align:right;white-space:nowrap}
+.track{position:relative;height:14px;border-radius:7px;background:var(--accent-soft);border:1px solid var(--line)}
+.fill{width:25%;height:100%;border-radius:7px;background:var(--accent);opacity:.75}
+.tick{position:absolute;left:25%;top:100%;width:1px;height:8px;background:var(--muted)}
+.end{position:absolute;right:-1px;top:-7px;width:3px;height:28px;background:var(--accent);border-radius:2px}
+.start{font-size:13px;color:var(--muted);margin-top:10px}
+.warn{font-weight:700;margin-top:6px}
+.eff{font-size:13px;color:var(--muted);font-weight:700}
+.card ul{padding-left:1.2em;display:flex;flex-direction:column;gap:2px;font-weight:500}
+
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.tw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:660px;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:9px 10px;text-align:center;white-space:nowrap;border-top:1px solid var(--line)}
+thead th{border-top:0;font-size:13px;font-weight:700;background:var(--surface)}
+tbody th,thead th:first-child{position:sticky;left:0;background:var(--surface);z-index:1;font-weight:700;border-right:1px solid var(--line)}
+.goal{background:var(--accent-soft);font-weight:700}
+.punch{font-family:var(--display);font-weight:900;font-size:18px}
+.ph{display:inline-block}
+.note{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+@media (max-width:600px){
+  h1{font-size:22px}
+  .hero p{font-size:19px}
+  .pair{grid-template-columns:minmax(0,1fr)}
+  .arrow{flex-direction:row;gap:6px;padding:2px 0}
+  .arrow::after{content:"\2193"}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>イソトレチノインの飲み方ガイド</h1>
+    <p class="meta"><span class="tag">ドラフト</span><span>2026年11月24日 時点</span></p>
+  </header>
+
+  <div class="hero">
+    <p><span class="ph">できたニキビを治すのではなく、</span><span class="ph">「ニキビができない肌」を</span><span class="ph">目指す薬です。</span></p>
+    <p class="key"><span class="ph">大事なのは「期間」ではなく</span><span class="ph">「飲んだ合計量」。</span></p>
+  </div>
+
+  <section aria-labelledby="myths">
+    <h2 id="myths">よくある2つの誤解</h2>
+    <div class="pairs">
+      <div class="pair">
+        <div class="card"><span class="lab bad">✕ 誤解</span><p class="say">「◯か月飲めば終わり」</p></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="card right"><span class="lab good">○ 正しくは</span><p class="say">合計量がゴールに届いたら終わり</p><p class="sub">大事なのは期間ではなく、飲んだ合計量</p></div>
+      </div>
+      <div class="pair">
+        <div class="card"><span class="lab bad">✕ 誤解</span><p class="say"><span class="ph">目標量を実際より</span><span class="ph">少なく思っている</span></p></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="card right"><span class="lab good">○ 正しくは</span><p class="say">目標量は、そんなに少なくない</p><p class="sub"><span class="ph">体重60kgなら7,200〜9,000mg</span><span class="ph">（20mgで360〜450カプセル）</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="goal">
+    <h2 id="goal">ゴール：どれくらい飲む？</h2>
+    <p class="goal-line"><strong><span class="ph">目標は、合計で</span><span class="ph">「体重（kg）× 120〜150mg」。</span></strong> <span class="ph">飲み切ると再発しにくくなります。</span></p>
+
+    <div class="stages" role="group" aria-labelledby="stages-title">
+      <h3 id="stages-title"><span class="ph">効果は2段階。</span><span class="ph">1段階目でやめないことが大切</span></h3>
+      <div>
+        <div class="marks"><span class="m1">1〜2か月</span><span class="m2">ゴール<br>体重×120〜150mg</span></div>
+        <div class="track"><div class="fill"></div><i class="tick"></i><i class="end"></i></div>
+        <p class="start">飲み始め</p>
+      </div>
+      <div class="pair">
+        <div class="card"><p class="say">① 肌がきれいになる</p><p class="sub"><span class="ph">ニキビ・皮脂・毛穴の変化が</span><span class="ph">目に見えて分かる</span></p><p class="warn">ここでやめると再発しやすい</p></div>
+        <div class="arrow" aria-hidden="true"><span>続ける</span></div>
+        <div class="card right"><p class="say">② 目標量の達成後</p><p class="eff">半永久的に得られる効果</p>
+          <ul><li>ニキビができない、できづらい</li><li>皮脂が出づらい（テカらない）</li><li>毛穴が開きづらい</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="table-title">
+    <h3 id="table-title">体重別の目標量と、1日の量ごとの期間</h3>
+    <p><span class="ph">まず「目標の合計量」を確認。</span><span class="ph">期間は1日の量で変わります</span></p>
+    <div class="tw" tabindex="0" role="region" aria-labelledby="table-title">
+      <table>
+        <thead><tr><th scope="col">体重</th><th scope="col" class="goal">目標の合計量</th><th scope="col">1日10mg</th><th scope="col">1日20mg</th><th scope="col">1日30mg</th><th scope="col">1日40mg</th><th scope="col">1日60mg</th></tr></thead>
+        <tbody>
+        <tr><th scope="row">40kg</th><td class="goal">4,800〜6,000mg</td><td>16〜20か月</td><td>8〜10か月</td><td>5〜7か月</td><td>4〜5か月</td><td>3か月</td></tr>
+        <tr><th scope="row">45kg</th><td class="goal">5,400〜6,750mg</td><td>18〜23か月</td><td>9〜11か月</td><td>6〜8か月</td><td>5〜6か月</td><td>3〜4か月</td></tr>
+        <tr><th scope="row">50kg</th><td class="goal">6,000〜7,500mg</td><td>20〜25か月</td><td>10〜13か月</td><td>7〜8か月</td><td>5〜6か月</td><td>3〜4か月</td></tr>
+        <tr><th scope="row">55kg</th><td class="goal">6,600〜8,250mg</td><td>22〜28か月</td><td>11〜14か月</td><td>7〜9か月</td><td>6〜7か月</td><td>4〜5か月</td></tr>
+        <tr><th scope="row">60kg</th><td class="goal">7,200〜9,000mg</td><td>24〜30か月</td><td>12〜15か月</td><td>8〜10か月</td><td>6〜8か月</td><td>4〜5か月</td></tr>
+        <tr><th scope="row">65kg</th><td class="goal">7,800〜9,750mg</td><td>26〜33か月</td><td>13〜16か月</td><td>9〜11か月</td><td>7〜8か月</td><td>4〜5か月</td></tr>
+        <tr><th scope="row">70kg</th><td class="goal">8,400〜10,500mg</td><td>28〜35か月</td><td>14〜18か月</td><td>9〜12か月</td><td>7〜9か月</td><td>5〜6か月</td></tr>
+        <tr><th scope="row">75kg</th><td class="goal">9,000〜11,250mg</td><td>30〜38か月</td><td>15〜19か月</td><td>10〜13か月</td><td>8〜9か月</td><td>5〜6か月</td></tr>
+        <tr><th scope="row">80kg</th><td class="goal">9,600〜12,000mg</td><td>32〜40か月</td><td>16〜20か月</td><td>11〜13か月</td><td>8〜10か月</td><td>5〜7か月</td></tr>
+        <tr><th scope="row">85kg</th><td class="goal">10,200〜12,750mg</td><td>34〜43か月</td><td>17〜21か月</td><td>11〜14か月</td><td>9〜11か月</td><td>6〜7か月</td></tr>
+        <tr><th scope="row">90kg</th><td class="goal">10,800〜13,500mg</td><td>36〜45か月</td><td>18〜23か月</td><td>12〜15か月</td><td>9〜11か月</td><td>6〜8か月</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="punch">1日の量が多いほど、期間は短くなります。</p>
+  </section>
+
+  <p class="note"><span class="ph">副作用や注意事項は、</span><span class="ph">説明書・同意書をご確認ください。</span><span class="ph">気になることはLINEでご相談ください。</span></p>
+</div>
+</body>
+</html>
