@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>痩身領域の薬 マーケ向けガイド</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* Layout: one column of color-coded panels. Orange = drugs that cut appetite, teal = drugs that cut what you absorb; yellow marks the points to remember. */
+:root{
+  --bg:#f3f5fb; --surface:#ffffff; --ink:#1b2140; --muted:#5c6480; --line:#dde2ef;
+  --t1:#ee5326; --t1-soft:#ffe8df; --t1-ink:#a22f0d;
+  --t2:#0b9a82; --t2-soft:#d9f4ee; --t2-ink:#056553;
+  --hl:#ffd94a; --hl-ink:#4d3b00;
+  --on-color:#ffffff;
+  --display:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Noto Sans JP",sans-serif;
+  --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#111528; --surface:#1a2040; --ink:#eef1fb; --muted:#a6aecb; --line:#2f3862;
+  --t1:#ff8a63; --t1-soft:#48231a; --t1-ink:#ffc6b3;
+  --t2:#4ccfb7; --t2-soft:#123a34; --t2-ink:#a9f0e2;
+  --hl:#ffd94a; --hl-ink:#3a2c00; --on-color:#14182c; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#111528; --surface:#1a2040; --ink:#eef1fb; --muted:#a6aecb; --line:#2f3862;
+  --t1:#ff8a63; --t1-soft:#48231a; --t1-ink:#ffc6b3;
+  --t2:#4ccfb7; --t2-soft:#123a34; --t2-ink:#a9f0e2;
+  --hl:#ffd94a; --hl-ink:#3a2c00; --on-color:#14182c; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+.wrap{max-width:900px;margin:0 auto;padding:32px 16px 64px;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.35;margin:0;text-wrap:balance;word-break:auto-phrase}
+h1{font-size:40px;font-weight:900;letter-spacing:.01em}
+h2{font-size:26px;font-weight:900;display:flex;align-items:center;gap:12px}
+h2::before{content:"";width:12px;height:30px;border-radius:6px;background:var(--hl);flex:none}
+h3{font-size:19px;font-weight:800}
+p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+section{display:flex;flex-direction:column;gap:18px;min-width:0}
+.ph{display:inline-block}
+mark{background:linear-gradient(transparent 58%,var(--hl) 58%);color:inherit;padding:0 2px}
+/* On dark surfaces a marker band sits behind light text and hides it, so the highlighted words turn yellow themselves, with a thin line underneath. */
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) mark{background:none;color:var(--hl);border-bottom:3px solid rgba(255,217,74,.45);padding:0 1px 1px} }
+:root[data-theme="dark"] mark{background:none;color:var(--hl);border-bottom:3px solid rgba(255,217,74,.45);padding:0 1px 1px}
+
+/* header */
+header{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-family:var(--display);font-weight:800;font-size:14px;color:var(--muted);letter-spacing:.06em}
+.meta{font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:0 10px;background:var(--surface)}
+
+/* key points */
+.points{display:flex;flex-direction:column;gap:12px}
+.point{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:center;background:var(--surface);border-radius:18px;padding:18px 22px;border:2px solid var(--line)}
+.point .n{font-family:var(--display);font-weight:900;font-size:46px;line-height:1;text-align:center}
+.point p{font-family:var(--display);font-weight:800;font-size:21px;line-height:1.5;word-break:auto-phrase}
+.point.p1 .n{color:var(--ink)}
+.point.p2{border-color:var(--t1)} .point.p2 .n{color:var(--t1)}
+.point.p3{border-color:var(--t2)} .point.p3 .n{color:var(--t2)}
+.c1{color:var(--t1-ink)} .c2{color:var(--t2-ink)}
+
+/* map */
+.map{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.type{background:var(--surface);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:2px solid var(--line)}
+.type.t1{border-color:var(--t1)} .type.t2{border-color:var(--t2)}
+.type-head{padding:16px 20px;color:var(--on-color);display:flex;flex-direction:column;gap:2px}
+.t1 .type-head{background:var(--t1)} .t2 .type-head{background:var(--t2)}
+.type-head .name{font-family:var(--display);font-weight:900;font-size:22px;line-height:1.35}
+.type-head .how{font-size:14px;font-weight:500}
+.groups{display:grid;gap:12px;padding:16px;flex:1}
+.t1 .groups{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr)}
+.t2 .groups{grid-template-columns:repeat(2,minmax(0,1fr))}
+.group{border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.t1 .group{background:var(--t1-soft)} .t2 .group{background:var(--t2-soft)}
+.use{font-family:var(--display);font-weight:800;font-size:14px}
+.t1 .use{color:var(--t1-ink)} .t2 .use{color:var(--t2-ink)}
+.drug{background:var(--surface);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:2px;line-height:1.4}
+.drug b{font-family:var(--display);font-weight:800;font-size:16px}
+.drug small{font-size:12px;color:var(--muted)}
+.drug.star{background:var(--t1);color:var(--on-color)}
+.drug.star small{color:var(--on-color);opacity:.92}
+.badge{align-self:flex-start;white-space:nowrap;font-size:10.5px;font-weight:700;background:var(--hl);color:var(--hl-ink);border-radius:999px;padding:1px 8px;margin-top:4px}
+.drug.off{background:transparent;border:1.5px dashed var(--muted);color:var(--muted)}
+.note{font-size:14px;color:var(--muted)}
+
+/* versus */
+.vs{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);border-radius:18px;overflow:hidden;border:2px solid var(--line);background:var(--surface)}
+.vs > div{padding:14px 16px;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.vs .h{border-top:0;font-family:var(--display);font-weight:900;font-size:17px;color:var(--on-color);line-height:1.35}
+.vs .h.blank{background:var(--surface)}
+.vs .h.a{background:var(--t1)} .vs .h.b{background:var(--t2)}
+.vs .label{font-weight:700;font-size:15px}
+.vs .a{background:var(--t1-soft)} .vs .b{background:var(--t2-soft)}
+.vs .v{font-family:var(--display);font-weight:800;font-size:17px}
+.sym{font-family:var(--display);font-weight:900;font-size:22px;line-height:1;flex:none}
+.sym.x{color:var(--t1)} .sym.o{color:var(--t2)}
+
+/* insights */
+.ins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.in{background:var(--surface);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;border:2px solid var(--line)}
+.in .k{font-family:var(--display);font-weight:800;font-size:13px;color:var(--muted);letter-spacing:.04em}
+.in .s{font-family:var(--display);font-weight:800;font-size:19px;line-height:1.5;word-break:auto-phrase}
+.in .d{font-size:14px;color:var(--muted)}
+.in.hot{background:var(--hl);border-color:var(--hl);color:var(--hl-ink)}
+.in.hot .k,.in.hot .d{color:var(--hl-ink)}
+
+/* drug cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border-radius:18px;overflow:hidden;border:2px solid var(--line);display:flex;flex-direction:column}
+.card.t1{border-color:var(--t1)} .card.t2{border-color:var(--t2)}
+.card-head{padding:12px 18px;color:var(--on-color);display:flex;flex-direction:column}
+.card.t1 .card-head{background:var(--t1)} .card.t2 .card-head{background:var(--t2)}
+.card-head .kind{font-size:12px;font-weight:700;opacity:.95}
+.card-head .nm{font-family:var(--display);font-weight:900;font-size:22px;line-height:1.35}
+.card dl{display:flex;flex-direction:column;padding:6px 18px 14px}
+.card dl > div{padding:10px 0;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:2px}
+.card dl > div:first-child{border-top:0}
+.card dt{font-family:var(--display);font-weight:800;font-size:13px}
+.card.t1 dt{color:var(--t1-ink)} .card.t2 dt{color:var(--t2-ink)}
+.card dd{font-size:15px;line-height:1.65}
+.todo{display:inline-block;font-size:12px;font-weight:700;color:var(--muted);border:1.5px dashed var(--muted);border-radius:999px;padding:0 10px}
+
+/* side effects, off-list */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.se{border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.se.a{background:var(--t1-soft)} .se.b{background:var(--t2-soft)}
+.se .k{font-family:var(--display);font-weight:800;font-size:15px}
+.se.a .k{color:var(--t1-ink)} .se.b .k{color:var(--t2-ink)}
+.se .s{font-family:var(--display);font-weight:800;font-size:18px;line-height:1.5}
+.se .d{font-size:14px}
+.offc{border-radius:16px;padding:16px 18px;border:1.5px dashed var(--muted);display:flex;flex-direction:column;gap:4px}
+.offc .s{font-family:var(--display);font-weight:800;font-size:17px}
+.offc .d{font-size:14px;color:var(--muted)}
+.later{background:var(--surface);border-radius:16px;padding:16px 20px;border:2px solid var(--line);display:flex;flex-direction:column;gap:6px;font-size:15px}
+.later li{padding-left:1.2em;position:relative}
+.later li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;border:2px solid var(--muted)}
+
+@media (max-width:720px){
+  h1{font-size:30px}
+  h2{font-size:22px}
+  .point{grid-template-columns:44px minmax(0,1fr);padding:14px 16px;gap:12px}
+  .point .n{font-size:36px}
+  .point p{font-size:18px}
+  .map,.ins,.cards,.duo{grid-template-columns:minmax(0,1fr)}
+  .t1 .groups,.t2 .groups{grid-template-columns:minmax(0,1fr)}
+  .vs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .vs .h.blank{display:none}
+  .vs .label{grid-column:1 / -1;background:var(--bg);font-size:14px;padding:8px 16px}
+  .vs .v{font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">QBC マーケ向け薬剤ガイド</p>
+    <h1>痩身領域の薬</h1>
+    <p class="meta"><span class="tag">ドラフト</span><span>2026年11月24日 時点</span></p>
+  </header>
+
+  <ol class="points" aria-label="まず押さえる3点">
+    <li class="point p1"><span class="n" aria-hidden="true">1</span>
+      <p>痩せる薬は<mark>2種類</mark>。<span class="ph c1">「食欲を落とす薬」</span>と<span class="ph c2">「食べても太りにくくする薬」。</span></p></li>
+    <li class="point p2"><span class="n" aria-hidden="true">2</span>
+      <p>いま一番売れているのは、<span class="ph">週1回注射の<mark>マンジャロ</mark>。</span></p></li>
+    <li class="point p3"><span class="n" aria-hidden="true">3</span>
+      <p>食べても太りにくくする薬は、<span class="ph"><mark>継続率が意外と高い</mark>見込み。</span><span class="ph">QBCは<mark>まだ広告で打ち出していない</mark>。</span></p></li>
+  </ol>
+
+  <section aria-labelledby="map">
+    <h2 id="map">全体マップ</h2>
+    <div class="map">
+      <div class="type t1">
+        <div class="type-head"><span class="name">① 食欲を落とす薬</span><span class="how">食事の量そのものを減らす（GLP-1の薬）</span></div>
+        <div class="groups">
+          <div class="group">
+            <span class="use">注射・週1回</span>
+            <div class="drug star"><b>マンジャロ</b><small>GLP-1＋GIP</small><span class="badge">いま一番売れている</span></div>
+            <div class="drug"><b>オゼンピック</b></div>
+          </div>
+          <div class="group">
+            <span class="use">注射・毎日</span>
+            <div class="drug"><b>ビクトーザ</b></div>
+            <div class="drug off"><b>サクセンダ</b><small>取り扱いなし</small></div>
+          </div>
+          <div class="group">
+            <span class="use">飲み薬・毎日1回</span>
+            <div class="drug"><b>リベルサス</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="type t2">
+        <div class="type-head"><span class="name">② 食べても太りにくくする薬</span><span class="how">摂った糖質や脂質をカットする</span></div>
+        <div class="groups">
+          <div class="group">
+            <span class="use">糖質カット</span>
+            <div class="drug"><b>メトホルミン</b><small>毎食のむ</small></div>
+            <div class="drug"><b>カナグル</b><small>1日1回のむ</small></div>
+            <div class="drug"><b>フォシーガ</b><small>1日1回のむ</small></div>
+          </div>
+          <div class="group">
+            <span class="use">脂質カット</span>
+            <div class="drug off"><b>ゼニカル</b><small>取り扱いなし</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note">QBCで扱っているのは、すべて国内薬です。</p>
+  </section>
+
+  <section aria-labelledby="vs">
+    <h2 id="vs">2つのタイプの使い分け</h2>
+    <div class="vs">
+      <div class="h blank"></div><div class="h a">食欲を落とす薬</div><div class="h b">食べても太りにくくする薬</div>
+      <div class="label">痩せる仕組み</div><div class="a v">食べる量が減る</div><div class="b v">食べた分が太りにくくなる</div>
+      <div class="label">食べてしまったとき</div><div class="a v"><span class="sym x" aria-hidden="true">✕</span>これまで通り太る</div><div class="b v"><span class="sym o" aria-hidden="true">○</span>太りにくい</div>
+      <div class="label">会食や友人との食事など、避けられない食事</div><div class="a v"><span class="sym x" aria-hidden="true">✕</span>対応できない</div><div class="b v"><span class="sym o" aria-hidden="true">○</span>対応できる</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ins">
+    <h2 id="ins">広告と継続の見立て</h2>
+    <div class="ins">
+      <div class="in"><span class="k">他社の広告</span><p class="s">広告はマンジャロが目立つ</p><p class="d">メトホルミンやSGLT2阻害薬（カナグル・フォシーガ）に絞った広告を出している他社もある</p></div>
+      <div class="in hot"><span class="k">QBCの広告</span><p class="s">メトホルミンやSGLT2阻害薬に絞った広告は、出したことがない</p></div>
+      <div class="in"><span class="k">継続率の見立て</span><p class="s">食べても太りにくくする薬は、継続率が意外と高いと見ている</p><p class="d">副作用が比較的マイルドで、食事制限がいらず使いやすいため</p></div>
+      <div class="in"><span class="k">鍵野のおすすめ</span><p class="s">メトホルミン</p><p class="d">仕入れ価格が非常に安く、自身も長年使っている</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="each">
+    <h2 id="each">薬ごとの整理</h2>
+    <div class="cards">
+
+      <article class="card t1">
+        <div class="card-head"><span class="kind">食欲を落とす薬</span><span class="nm">マンジャロ</span></div>
+        <dl>
+          <div><dt>誰の、どんな悩みに使う薬か</dt><dd>食べる量を減らして痩せたい人</dd></div>
+          <div><dt>この薬のすごいところ</dt><dd>GLP-1に加えてGIPも入っている唯一の薬。GLP-1だけの薬より痩せる効果が高いという研究がある。いちばん新しく、価格も比較的安い</dd></div>
+          <div><dt>効果の出方</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>続け方と、必要な量・期間</dt><dd>週1回の注射。必要な量と期間は <span class="todo">これから追記</span></dd></div>
+          <div><dt>患者さんのよくある誤解</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>訴求のヒント</dt><dd>週1回で済む手軽さ。GIP入りで効果が高い。新しくて価格も手ごろ</dd></div>
+        </dl>
+      </article>
+
+      <article class="card t1">
+        <div class="card-head"><span class="kind">食欲を落とす薬</span><span class="nm">そのほかの食欲を落とす薬</span></div>
+        <dl>
+          <div><dt>誰の、どんな悩みに使う薬か</dt><dd>食べる量を減らして痩せたい人</dd></div>
+          <div><dt>この薬のすごいところ</dt><dd>オゼンピックは週1回の注射で済む。リベルサスは注射のいらない飲み薬</dd></div>
+          <div><dt>効果の出方</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>続け方と、必要な量・期間</dt><dd>オゼンピックは週1回、ビクトーザは毎日の注射。リベルサスは毎日1回飲む</dd></div>
+          <div><dt>患者さんのよくある誤解</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>訴求のヒント</dt><dd>注射が苦手な人には、飲み薬のリベルサス</dd></div>
+        </dl>
+      </article>
+
+      <article class="card t2">
+        <div class="card-head"><span class="kind">食べても太りにくくする薬</span><span class="nm">メトホルミン</span></div>
+        <dl>
+          <div><dt>誰の、どんな悩みに使う薬か</dt><dd>食事制限をしたくない人。会食や友人との食事など、避けられない食事の機会がある人</dd></div>
+          <div><dt>この薬のすごいところ</dt><dd>食事を制限しなくてよい。仕入れ価格が非常に安い。動脈硬化の予防やアンチエイジングの面でも注目されている。鍵野自身も長年使っている</dd></div>
+          <div><dt>効果の出方</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>続け方と、必要な量・期間</dt><dd>毎食、食事のたびに飲む。効く時間が短いため</dd></div>
+          <div><dt>患者さんのよくある誤解</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>訴求のヒント</dt><dd>会食や外食があっても使える。食事制限がいらない。健康や若々しさの面からも語れる。医師自身が長年使っている薬。カナグル・フォシーガと併用すると糖質カットの効果が高まる</dd></div>
+        </dl>
+      </article>
+
+      <article class="card t2">
+        <div class="card-head"><span class="kind">食べても太りにくくする薬</span><span class="nm">カナグル・フォシーガ</span></div>
+        <dl>
+          <div><dt>誰の、どんな悩みに使う薬か</dt><dd>食事制限をしたくない人。会食や友人との食事など、避けられない食事の機会がある人</dd></div>
+          <div><dt>この薬のすごいところ</dt><dd>食事を制限しなくてよい。1日1回で効果が1日続き、どのタイミングの食事にも効く。摂った糖を尿に出してカットする</dd></div>
+          <div><dt>効果の出方</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>続け方と、必要な量・期間</dt><dd>1日1回飲む</dd></div>
+          <div><dt>患者さんのよくある誤解</dt><dd><span class="todo">これから追記</span></dd></div>
+          <div><dt>訴求のヒント</dt><dd>会食や外食があっても使える。1日1回で、1日中。メトホルミンと併用すると糖質カットの効果が高まる</dd></div>
+        </dl>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="se">
+    <h2 id="se">副作用の出方の違い</h2>
+    <div class="duo">
+      <div class="se a"><span class="k">食欲を落とす薬（GLP-1の薬）</span><p class="s">気持ち悪さが出やすい</p><p class="d">ひどいと吐き気になる</p></div>
+      <div class="se b"><span class="k">糖質カットの薬</span><p class="s">比較的マイルド</p><p class="d">メトホルミンは便がゆるくなることがある</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="off">
+    <h2 id="off">取り扱いのない薬</h2>
+    <div class="duo">
+      <div class="offc"><p class="s">サクセンダ</p><p class="d">毎日の注射、海外薬。現在は取り扱いなし</p></div>
+      <div class="offc"><p class="s">ゼニカル（オルリスタット）</p><p class="d">脂質の吸収をカットする薬。効果は高いが、便がゆるくなる、意図せず漏れる、水のような下痢が出る、といった副作用がかなりの頻度で起こる。使いづらく、そこまで流行っていない</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="later">
+    <h2 id="later">これから追記する項目</h2>
+    <ul class="later">
+      <li>効果の出方（いつごろ、何が変わるか）</li>
+      <li>必要な量と期間（どこまで増やし、どれくらい続けるか）</li>
+      <li>患者さんのよくある誤解</li>
+      <li>オゼンピック、ビクトーザ、リベルサスのうち、QBCで扱っているもの</li>
+      <li>食欲を落とす薬と糖質カットの薬の併用はありか</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>
